@@ -7,10 +7,16 @@
     "test": "vitest run --passWithNoTests",
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
-    "lint": "eslint src",
+    "lint": "eslint src/**/*.ts",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "prepare": "husky"
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   },
   "repository": {
     "type": "git",
