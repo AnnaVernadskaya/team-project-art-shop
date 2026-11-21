@@ -4,8 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Art Shop</title>
+    <link rel="icon" type="image/svg+xml" href="./src/assets/images/favicon.svg" />
+    <link rel="stylesheet" href="./src/styles/base.css" />
+    <link rel="stylesheet" href="./src/styles/shop.css" />
+    <link rel="stylesheet" href="./src/styles/team.css" />
+    <link rel="stylesheet" href="./src/styles/catalog.css" />
+    <link rel="stylesheet" href="./src/styles/cart.css" />
+    <script type="module" src="/src/main.ts"></script>
   </head>
   <body>
-    <script type="module" src="/src/main.ts"></script>
+    <div id="app"></div>
+
+    <template id="team-template">
+      <main class="team-page">
+        <h1>О команде</h1>
+        <a href="#/catalog">Перейти в магазин</a>
+      </main>
+    </template>
+
+    <template id="shop-template">
+      <header class="shop-header">
+        <nav aria-label="Навигация магазина">
+          <a href="#/catalog">Каталог</a>
+          <a href="#/cart">Корзина</a>
+          <a href="#/team">О команде</a>
+        </nav>
+      </header>
+
+      <main id="shop-content"></main>
+
+      <footer class="shop-footer">Art Shop</footer>
+    </template>
+
+    <template id="catalog-template">
+      <section class="catalog-page">
+        <h1>Каталог картин</h1>
+      </section>
+    </template>
+
+    <template id="cart-template">
+      <section class="cart-page">
+        <h1>Корзина</h1>
+      </section>
+    </template>
   </body>
 </html>
