@@ -1,2 +1,11 @@
 node_modules/
 dist/
+*.local
+
+.husky/_
+
+.vitest/
+coverage/
+
+.vscode/*
+!.vscode/extensions.json
