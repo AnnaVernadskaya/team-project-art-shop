@@ -12,12 +12,6 @@
     "format:check": "prettier --check .",
     "prepare": "husky"
   },
-  "lint-staged": {
-    "src/**/*.ts": [
-      "eslint --fix",
-      "prettier --write"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AnnaVernadskaya/team-project-art-shop.git"
