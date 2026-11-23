@@ -37,3 +37,5 @@ export interface CartSummary {
   discount: number;
   total: number;
 }
+
+export type Route = "about" | "catalog" | "cart";
