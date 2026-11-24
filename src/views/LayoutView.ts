@@ -45,7 +45,7 @@ export class LayoutView {
   }
 
   private createFooter(): HTMLElement {
-    const footer = createElement("header", { className: "footer " });
+    const footer = createElement("footer", { className: "footer " });
     const container = createElement("div", { className: "container footer__inner" });
 
     const brand = createElement("div", { className: "footer__brand" });

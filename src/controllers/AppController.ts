@@ -1,12 +1,15 @@
 import { Route } from "../types";
 import { createElement } from "../utils/dom";
 import { LayoutView } from "../views/LayoutView";
+import { AboutView } from "../views/AboutView";
 
 export class AppController {
   private layout: LayoutView;
+  private aboutView: AboutView;
 
   constructor() {
     this.layout = new LayoutView();
+    this.aboutView = new AboutView();
   }
 
   private createPlaceholder(title: string, description: string): HTMLElement {
@@ -27,7 +30,7 @@ export class AppController {
 
     switch (route) {
       case "about":
-        container.append(this.createPlaceholder("О нас", "Страница команды в разработке"));
+        this.aboutView.render(container, () => this.navigate("catalog"));
         break;
       case "catalog":
         container.append(this.createPlaceholder("Репродукции", "Каталог в разработке"));
