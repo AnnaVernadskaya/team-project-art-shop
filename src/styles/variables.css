@@ -1,0 +1,18 @@
+:root {
+  --color-bg-main: #f4f6f5;
+  --color-bg-surface: #e1ede6;
+  --color-text-primary: #2c2d35;
+  --color-text-muted: #86928b;
+  --color-accent: #598d66;
+  --color-accent-hover: #376b44;
+  --color-accent-light: #d4e8d9;
+  --color-border: #c3d1c6;
+  --color-danger: #c94a4a;
+  --color-hover: #ffffff;
+
+  --font-main: system-ui, -apple-system, Raleway, sans-serif;
+  --container-max: 70rem;
+  --radius-sm: 0.25rem;
+  --radius-pill: 1.25rem;
+  --transition-fast: 0.2s ease;
+}

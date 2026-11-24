@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  user-select: none;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-main);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-main);
+  line-height: 1.5;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.main {
+  flex: 1;
+  padding: 2.5rem 0;
+}
+
+.btn-outline {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.875rem 2rem;
+  font-size: 1.125rem;
+  color: var(--color-accent);
+  background-color: transparent;
+  border: 1px solid var(--color-accent);
+  cursor: pointer;
+  transition: background-color var(--transition-fast) color var(--transition-fast);
+}
+
+.btn-outline:hover {
+  color: var(--color-hover);
+  background-color: var(--color-accent);
+}
+
+.btn-outline:active {
+  background-color: var(--color-accent-hover);
+}
