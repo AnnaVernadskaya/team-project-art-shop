@@ -1,3 +1,5 @@
-const heading = document.createElement("h1");
-heading.textContent = "Art Shop";
-document.body.append(heading);
+import "./styles/main.css";
+import { AppController } from "./controllers/AppController";
+
+const app = new AppController();
+app.init();
