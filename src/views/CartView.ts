@@ -148,7 +148,7 @@ export class CartView {
     const subtotalRow = createElement("div", { className: "cart-summary__row" });
 
     subtotalRow.append(
-      createElement("span", { text: "Товары" }),
+      createElement("span", { text: "Товары:" }),
       createElement("span", { text: this.formatPrice(state.summary.subtotal) })
     );
     details.append(subtotalRow);
@@ -190,7 +190,7 @@ export class CartView {
     container.replaceChildren();
 
     const wrapper = createElement("section", { className: "container cart" });
-    const pageTitle = createElement("h1", { className: "cart-heading", text: "Корзина" });
+    const pageTitle = createElement("h1", { className: "cart__heading", text: "Корзина" });
 
     wrapper.append(pageTitle);
 
@@ -211,7 +211,7 @@ export class CartView {
       wrapper.append(
         this.createMessageState(
           "Корзина пока пуста",
-          "выберите понравившиеся репродукции в нашем каталоге.",
+          "Выберите понравившиеся репродукции в нашем каталоге.",
           handlers.onGoToCatalog
         )
       );
