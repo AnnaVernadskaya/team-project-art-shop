@@ -10,7 +10,7 @@ const mockPainting1: Painting = {
   medium: "Холст, масло",
   size: "50x80",
   price: 14500,
-  image: "france/amur-hunt.jpg",
+  image: "france/amurs-hunt.jpg",
 };
 
 const mockPainting2: Painting = {
