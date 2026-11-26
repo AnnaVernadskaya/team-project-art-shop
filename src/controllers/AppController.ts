@@ -2,7 +2,7 @@ import { Route } from "../types";
 import { createElement } from "../utils/dom";
 import { LayoutView } from "../views/LayoutView";
 import { AboutView } from "../views/AboutView";
-
+import { renderCatalog } from "./CatalogController";
 export class AppController {
   private layout: LayoutView;
   private aboutView: AboutView;
@@ -33,7 +33,7 @@ export class AppController {
         this.aboutView.render(container, () => this.navigate("catalog"));
         break;
       case "catalog":
-        container.append(this.createPlaceholder("Репродукции", "Каталог в разработке"));
+        renderCatalog(container, () => this.navigate("about"));
         break;
       case "cart":
         container.append(this.createPlaceholder("Корзина", "Корзина в разработке"));
