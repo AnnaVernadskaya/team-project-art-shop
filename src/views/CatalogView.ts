@@ -4,19 +4,14 @@ import { createElement } from "../utils/dom";
 const PAGE_SIZE = 6;
 const priceFormat = new Intl.NumberFormat("ru-RU");
 
-export function renderCatalogPage(
-  container: HTMLElement,
-  paintings: readonly Painting[],
-  openAbout: () => void
-): void {
+export function renderCatalogPage(container: HTMLElement, paintings: readonly Painting[]): void {
   const page = createElement("div", { className: "shop-page" });
 
   const hero = createHeroSection();
   const catalog = createCatalogSection(paintings);
   const quote = createQuoteSection();
-  const team = createTeamSection(openAbout);
 
-  page.append(hero, catalog, quote, team);
+  page.append(hero, catalog, quote);
   container.append(page);
 }
 
@@ -233,33 +228,6 @@ function createQuoteSection(): HTMLElement {
 
   figure.append(quote, author);
   section.append(figure);
-
-  return section;
-}
-
-function createTeamSection(openAbout: () => void): HTMLElement {
-  const section = createElement("section", { className: "shop-team container" });
-
-  const image = createElement("img", {
-    className: "shop-team__image",
-    attrs: { src: "./images/team-painting.png", alt: "", loading: "lazy" },
-  });
-
-  const content = createElement("div");
-  const title = createElement("h2", { text: "Наша команда" });
-  const description = createElement("p", {
-    text: "Мы вдвоём создали этот магазин картин для учебного проекта RS School.",
-  });
-
-  const button = createElement("button", {
-    className: "btn-outline",
-    text: "Познакомиться с командой",
-    attrs: { type: "button" },
-  });
-  button.addEventListener("click", openAbout);
-
-  content.append(title, description, button);
-  section.append(image, content);
 
   return section;
 }

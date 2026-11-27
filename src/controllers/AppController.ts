@@ -44,7 +44,7 @@ export class AppController {
         this.aboutView.render(container, () => this.navigate("catalog"));
         break;
       case "catalog":
-        renderCatalog(container, () => this.navigate("about"));
+        renderCatalog(container);
         break;
       case "cart":
         this.cartController.render(container);
