@@ -10,7 +10,7 @@
   --color-danger: #c94a4a;
   --color-hover: #ffffff;
 
-  --font-main: system-ui, -apple-system, Raleway, sans-serif;
+  --font-main: "Raleway", system-ui, -apple-system, sans-serif;
   --container-max: 70rem;
   --radius-sm: 0.25rem;
   --radius-pill: 1.25rem;

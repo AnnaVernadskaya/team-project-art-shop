@@ -22,6 +22,12 @@
   font-weight: 700;
 }
 
+.logo__icon {
+  display: block;
+  width: 35px;
+  height: 35px;
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -47,6 +53,12 @@
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+}
+
+.nav__cart-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
 }
 
 .cart-badge {

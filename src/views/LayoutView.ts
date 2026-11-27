@@ -22,7 +22,13 @@ export class LayoutView {
     const container = createElement("div", { className: "container header__inner" });
 
     const logoButton = this.createNavButton("about", "logo");
-    const logoIcon = createElement("span", { className: "logo__icon", text: "✳" });
+    const logoIcon = createElement("img", {
+      className: "logo__icon",
+      attrs: {
+        src: "./logo-star.svg",
+        alt: "",
+      },
+    });
     const logoText = createElement("span", { className: "logo__text", text: "Ink. House" });
 
     logoButton.append(logoIcon, logoText);
@@ -31,11 +37,19 @@ export class LayoutView {
     const aboutButton = this.createNavButton("about", "nav__link", "О нас");
     const catalogButton = this.createNavButton("catalog", "nav__link", "Репродукции");
 
-    const cartButton = this.createNavButton("cart", "nav__link nav__link-cart", "🛒");
+    const cartButton = this.createNavButton("cart", "nav__link nav__link-cart");
     cartButton.setAttribute("aria-label", "Корзина");
+    const cartIcon = createElement("img", {
+      className: "nav__cart-icon",
+      attrs: {
+        src: "./icons/cart.svg",
+        alt: "",
+      },
+    });
+
     this.cartBadge = createElement("span", { className: "cart-badge", text: "0" });
 
-    cartButton.append(this.cartBadge);
+    cartButton.append(cartIcon, this.cartBadge);
 
     nav.append(aboutButton, catalogButton, cartButton);
     container.append(logoButton, nav);

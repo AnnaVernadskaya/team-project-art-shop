@@ -2,6 +2,7 @@ import { Route } from "../types";
 import { createElement } from "../utils/dom";
 import { LayoutView } from "../views/LayoutView";
 import { AboutView } from "../views/AboutView";
+import { renderCatalog } from "./CatalogController";
 import { CartModel } from "../models/CartModel";
 import { CartController } from "./CartController";
 
@@ -43,7 +44,7 @@ export class AppController {
         this.aboutView.render(container, () => this.navigate("catalog"));
         break;
       case "catalog":
-        container.append(this.createPlaceholder("Репродукции", "Каталог в разработке"));
+        renderCatalog(container);
         break;
       case "cart":
         this.cartController.render(container);
